@@ -11,7 +11,7 @@ class AnswerCard extends Component {
 			<Box
         bgcolor="info.main"
         borderRadius={16}
-				className="white f4 tc w-40 ml2 pa2"
+				className="white f4 tj lh-copy w-40 ml2 pa2"
 				style={{ minHeight: "150px" }}
 			>
         {answerString.split("\n").map((i, key) => {

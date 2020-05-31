@@ -27,7 +27,7 @@ class SelectQuestions extends Component{
 						style={{ minWidth: "200px", minHeight: "200px", fontSize: "2rem" }}
 					>
 						<Link to="/react" className="white no-underline">
-							React
+							React/Redux
 						</Link>
 					</Button>
 				</div>

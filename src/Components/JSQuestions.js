@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Button, TextField, Box, IconButton } from "@material-ui/core";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import ClearIcon from "@material-ui/icons/Clear";
+import { Button, TextField, Box } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { JSQUESTIONS } from "../Constants";
 import QuestionCard from "./QuestionCard";
 import AnswerCard from "./AnswerCard";
+import ScoreCard from "./ScoreCard";
 
 class JSQuestions extends Component {
 	initialState = {
@@ -70,10 +69,10 @@ class JSQuestions extends Component {
 			}
 		}
 	};
-	
+
 	//handle reset
 	_handleReset = () => {
-		if(this.state.setComplete === true){
+		if (this.state.setComplete === true) {
 			//reset state to inital state
 			this.setState(this.initialState);
 		}
@@ -93,7 +92,7 @@ class JSQuestions extends Component {
 		let cardsToRender;
 		//variable for scorecard/box elements to render
 		let scoreBox;
-		if(hasChecked){
+		if (hasChecked) {
 			//render both question and answer cards
 			cardsToRender = (
 				<div className="flex justify-center items-center">
@@ -101,65 +100,12 @@ class JSQuestions extends Component {
 					<AnswerCard answerString={answerString} />
 				</div>
 			);
-			//render full scorebox, with answer verification
-			scoreBox = (
-				<Box
-					bgcolor="text.disabled"
-					borderRadius={12}
-					className="flex justify-center w-auto ph2"
-				>
-					<ul className="list p10">
-						<li className="f5">
-							Question {questionIndex + 1} of {totalQuestions}{" "}
-						</li>
-						<li className="f5">
-							Correct Answers: {correctQuestions} of {completedQuestions}
-						</li>
-					</ul>
-					<div className="flex justify-center ml2">
-						<h1 className="f4 lh-copy ml2 white pa2">
-							Is your answer correct?
-						</h1>
-						<IconButton
-							aria-label="checkCircle"
-							color="primary"
-							onClick={() => this._handleAnswerVerified(true)}
-						>
-							<CheckCircleIcon fontSize="large" />
-						</IconButton>
-						<IconButton
-							aria-label="clear"
-							color="secondary"
-							onClick={() => this._handleAnswerVerified(false)}
-						>
-							<ClearIcon fontsize="large" />
-						</IconButton>
-					</div>
-				</Box>
-			);
 		} else {
-			//render only question 
+			//render only question
 			cardsToRender = (
 				<div className="flex justify-center items-center">
 					<QuestionCard questionString={questionString} />
 				</div>
-			);
-			//render scorebox without answer verification
-			scoreBox = (
-				<Box
-					bgcolor="text.disabled"
-					borderRadius={12}
-					className="flex justify-center w-auto ph2"
-				>
-					<ul className="list p10">
-						<li className="f5">
-							Question {questionIndex + 1} of {totalQuestions}{" "}
-						</li>
-						<li className="f5">
-							Correct Answers: {correctQuestions} of {completedQuestions}
-						</li>
-					</ul>
-				</Box>
 			);
 		}
 
@@ -176,9 +122,14 @@ class JSQuestions extends Component {
 				{!setComplete && (
 					<div>
 						{cardsToRender}
-						<div className="flex justify-center mt3">
-							{scoreBox}
-						</div>
+						<ScoreCard
+							questionIndex={questionIndex}
+							totalQuestions={totalQuestions}
+							correctQuestions={correctQuestions}
+							completedQuestions={completedQuestions}
+							hasChecked={hasChecked}
+							handleAnswerVerified={this._handleAnswerVerified.bind(this)}
+						/>
 						<div className="flex justify-center mt3 ml5 mr5 ph2">
 							<div className="bg-silver w-70 ph2">
 								<TextField
@@ -230,12 +181,6 @@ class JSQuestions extends Component {
 					</div>
 				)}
 			</div>
-			//question card
-			//answer card
-			//next button
-			//score card
-			//user answer form
-			//submit button
 		);
 	}
 }
