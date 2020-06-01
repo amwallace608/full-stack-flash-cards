@@ -3,7 +3,6 @@ import { Box } from '@material-ui/core'
 
 class QuestionCard extends Component{
   render(){
-    const questionString = this.props;
     return (
 			//question card/container
 			<Box

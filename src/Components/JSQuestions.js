@@ -90,8 +90,7 @@ class JSQuestions extends Component {
 
 		//variable for which cards to render
 		let cardsToRender;
-		//variable for scorecard/box elements to render
-		let scoreBox;
+
 		if (hasChecked) {
 			//render both question and answer cards
 			cardsToRender = (

@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-import { Button, TextField, Box, IconButton } from "@material-ui/core";
+import { Box, IconButton } from "@material-ui/core";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ClearIcon from "@material-ui/icons/Clear";
 
 class ScoreCard extends Component{
-  //constructor
-  constructor(props){
-    super(props);
-  }
-
 
   render() {
     const questionIndex = this.props.questionIndex;
@@ -24,7 +19,7 @@ class ScoreCard extends Component{
 				<Box
 					bgcolor="text.disabled"
 					borderRadius={12}
-					className="flex justify-center w-auto ph2"
+					className="flex w-auto"
 				>
 					<ul className="list p10">
 						<li className="f5">
@@ -63,7 +58,7 @@ class ScoreCard extends Component{
 					borderRadius={12}
 					className="flex justify-center w-auto ph2"
 				>
-					<ul className="list p10">
+					<ul className="list p10 pr4">
 						<li className="f5">
 							Question {questionIndex + 1} of {totalQuestions}{" "}
 						</li>
