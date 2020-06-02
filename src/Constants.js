@@ -354,7 +354,7 @@ export const REACT_QUESTIONS = [
 	{
 		question: "Give a basic explanation of how the Virtual DOM works",
 		answer:
-			"1.Whenever underlying data chagnes, the entire UI is re-rendered in the Virtual DOM representation\n" +
+			"1.Whenever underlying data changes, the entire UI is re-rendered in the Virtual DOM representation\n" +
 			"2.The difference between the previous DOM (held by the Real DOM) and the new Virtual DOM is calculated\n" +
 			"3.Only the calculated changes from the Virtual DOM are updated on the Real DOM",
 	},
@@ -670,266 +670,284 @@ export const REACT_QUESTIONS = [
 
 //array of data structures questions
 export const DS_QUESTIONS = [
-					{
-						question: "What is a data-structure?",
-						answer: "A way of defining, storing, and retreiving data in a structural and systematic way.",
-					},
-					{
-						question: "Name some commonly available data structures",
-						answer: "-list\n" + "-array\n" + "-stack\n" + "-queue\n" + "-tree\n" + "-graph\n",
-					},
-					{
-						question: "What is an algorithm?",
-						answer: "A step by step procedure, which defines a set of instructions to be executed in a specific order to get a desired output." + 
-						" All computer programs are algorithms. In mathematics and computer science, an algorithm usually means a small procedure that solves a recurrent problem.",
-					},
-					{
-						question: "What is a linked-list?",
-						answer: "A linear collection of data elements (usually called nodes), where the linear order is not provided by their physical placement in memory, " + 
-						"but by pointers (links) from one element to the next. ",
-					},
-					{
-						question: "What is a stack?",
-						answer: "A Last-In-First-Out (LIFO) data structure. Can be implemented using an array or a linked list.",
-					},
-					{
-						question: "When are stacks used?",
-						answer: "Stacks are used when you need to access data elements in the reverse order of their arrival. " + 
-						"They are commonly used in recursive function calls, expression parsing, depth-first graph traversal, etc.",
-					},
-					{
-						question: "What operations can generally be performed on a stack?",
-						answer: "-push(): adds an item to the top of the stack\n" + 
-						"-pop(): removes the item at the top of the stack\n" + 
-						"-peek(): gets the value of the item on top of the stack without removing it\n" + 
-						"-isEmpty()/isFull(): checks if the stack is empty or full",
-					},
-					{
-						question: "What is the queue data structure?",
-						answer: "A First-In-First-Out (FIFO) data structure. Can be implemented using an array or linked list. " + 
-						"One end is used to insert data (enqueue), and the other end is used to remove data (dequeue)",
-					},
-					{
-						question: "What are linear and non-linear data structures?",
-						answer: "-Linear: A data struct is said to be linear if its elements form a sequence or a linear list (e.g Array, Linked List, Stack, Queue)\n" + 
-						"-Non-Linear: A data struct is said to be non-linear if traversal of its nodes is nonlinear in nature (e.g Graphs and Trees)",
-					},
-					{
-						question: "How is an Array different from a Linked List?",
-						answer: "-Arrays have fixed size, while Linked Lists are dynamic in size\n" + 
-						"-Insertion and deletion elements from an Array is expensive, but are easily done in Linked Lists\n" + 
-						"-Random access is allowed in Arrays, but not Linked Lists\n" + 
-						"-Extra memory space for at least one pointer is required for each element in a Linked List\n" + 
-						"-Arrays are contiguous memory blocks, and thus have better cache locality than Linked Lists, which aren't necessarily in contiguous memory blocks.",
-					},
-					{
-						question: "What are the different types of Linked Lists?",
-						answer: "1.Singly linked list: Every node stores an address/reference for the next node in the list, with the last node pointing to null.\n" + 
-						"2.Doubly linked list: Each node stores two addresses/references - one pointing to the next node, and one to the previous node in the list.\n" + 
-						"3.Circular linked list: A linked list where the last node in the list, points to the first node, forming a circle. Circular linked lists can be either singly or doubly linked.",
-					},
-					{
-						question: "Is it possible to implement a doubly linked list using a only single pointer variable in each node?",
-						answer: "Yes, a doubly linked list can be implemented with a single pointer with an XOR linked list - where each node stores the bitwise XOR of the previous and next node addresses.",
-					},
-					{
-						question: "How can you check if a given binary tree is a BST (Binary Search Tree) or not?",
-						answer: "Perform an inorder traversal of the binary tree, and while traversing keep track of the previous key value. " + 
-						"If the current key is always greater than the previous through the inorder traversal of the tree, it is sorted, and is a BST",
-					},
-					{
-						question: "What are infix, prefix, and postfix notations?",
-						answer: "-infix: the standard way we write expressions - operators are written in-between their operands (x + y)\n" + 
-						"-prefix: operators are written before their operands (+ x y)\n" + 
-						"-postfix: operators are written after their operands (x y +)",
-					},
-					{
-						question: "Describe the process of Hashing. What is the most commonly used data structure based on Hashing?",
-						answer: "-Hashing is a process used to uniquely identify objects and store them at pre-calculated unique indexes called 'keys'. " + 
-						"Objects are stored in the form of 'key-value' pairs, and a collection of them is called a 'dictionary'. Each object can be searched using its key.\n" + 
-						"The most commonly used data structure based on hashing is the Hash Table.",
-					},
-					{
-						question: "The performance of a hashing data structure depends on what three factors?",
-						answer: "1.The Hash Function\n" + "2.The size of the Hash Table\n" + "3.The Collision Handling Method",
-					},
-				];
-
+	{
+		question: "What is a data-structure?",
+		answer:
+			"A way of defining, storing, and retreiving data in a structural and systematic way.",
+	},
+	{
+		question: "Name some commonly available data structures",
+		answer:
+			"-list\n" + "-array\n" + "-stack\n" + "-queue\n" + "-tree\n" + "-graph\n",
+	},
+	{
+		question: "What is an algorithm?",
+		answer:
+			"A step by step procedure, which defines a set of instructions to be executed in a specific order to get a desired output." +
+			" All computer programs are algorithms. In mathematics and computer science, an algorithm usually means a small procedure that solves a recurrent problem.",
+	},
+	{
+		question: "What is a linked-list?",
+		answer:
+			"A linear collection of data elements (usually called nodes), where the linear order is not provided by their physical placement in memory, " +
+			"but by pointers (links) from one element to the next. ",
+	},
+	{
+		question: "What is a stack?",
+		answer:
+			"A Last-In-First-Out (LIFO) data structure. Can be implemented using an array or a linked list.",
+	},
+	{
+		question: "When are stacks used?",
+		answer:
+			"Stacks are used when you need to access data elements in the reverse order of their arrival. " +
+			"They are commonly used in recursive function calls, expression parsing, depth-first graph traversal, etc.",
+	},
+	{
+		question: "What operations can generally be performed on a stack?",
+		answer:
+			"-push(): adds an item to the top of the stack\n" +
+			"-pop(): removes the item at the top of the stack\n" +
+			"-peek(): gets the value of the item on top of the stack without removing it\n" +
+			"-isEmpty()/isFull(): checks if the stack is empty or full",
+	},
+	{
+		question: "What is the queue data structure?",
+		answer:
+			"A First-In-First-Out (FIFO) data structure. Can be implemented using an array or linked list. " +
+			"One end is used to insert data (enqueue), and the other end is used to remove data (dequeue)",
+	},
+	{
+		question: "What are linear and non-linear data structures?",
+		answer:
+			"-Linear: A data struct is said to be linear if its elements form a sequence or a linear list (e.g Array, Linked List, Stack, Queue)\n" +
+			"-Non-Linear: A data struct is said to be non-linear if traversal of its nodes is nonlinear in nature (e.g Graphs and Trees)",
+	},
+	{
+		question: "How is an Array different from a Linked List?",
+		answer:
+			"-Arrays have fixed size, while Linked Lists are dynamic in size\n" +
+			"-Insertion and deletion elements from an Array is expensive, but are easily done in Linked Lists\n" +
+			"-Random access is allowed in Arrays, but not Linked Lists\n" +
+			"-Extra memory space for at least one pointer is required for each element in a Linked List\n" +
+			"-Arrays are contiguous memory blocks, and thus have better cache locality than Linked Lists, which aren't necessarily in contiguous memory blocks.",
+	},
+	{
+		question: "What are the different types of Linked Lists?",
+		answer:
+			"1.Singly linked list: Every node stores an address/reference for the next node in the list, with the last node pointing to null.\n" +
+			"2.Doubly linked list: Each node stores two addresses/references - one pointing to the next node, and one to the previous node in the list.\n" +
+			"3.Circular linked list: A linked list where the last node in the list, points to the first node, forming a circle. Circular linked lists can be either singly or doubly linked.",
+	},
+	{
+		question:
+			"Is it possible to implement a doubly linked list using a only single pointer variable in each node?",
+		answer:
+			"Yes, a doubly linked list can be implemented with a single pointer with an XOR linked list - where each node stores the bitwise XOR of the previous and next node addresses.",
+	},
+	{
+		question:
+			"How can you check if a given binary tree is a BST (Binary Search Tree) or not?",
+		answer:
+			"Perform an inorder traversal of the binary tree, and while traversing keep track of the previous key value. " +
+			"If the current key is always greater than the previous through the inorder traversal of the tree, it is sorted, and is a BST",
+	},
+	{
+		question: "What are infix, prefix, and postfix notations?",
+		answer:
+			"-infix: the standard way we write expressions - operators are written in-between their operands (x + y)\n" +
+			"-prefix: operators are written before their operands (+ x y)\n" +
+			"-postfix: operators are written after their operands (x y +)",
+	},
+	{
+		question:
+			"Describe the process of Hashing. What is the most commonly used data structure based on Hashing?",
+		answer:
+			"-Hashing is a process used to uniquely identify objects and store them at pre-calculated unique indexes called 'keys'. " +
+			"Objects are stored in the form of 'key-value' pairs, and a collection of them is called a 'dictionary'. Each object can be searched using its key.\n" +
+			"The most commonly used data structure based on hashing is the Hash Table.",
+	},
+	{
+		question:
+			"The performance of a hashing data structure depends on what three factors?",
+		answer:
+			"1.The Hash Function\n" +
+			"2.The size of the Hash Table\n" +
+			"3.The Collision Handling Method",
+	},
+];
 
 //Android Interview questions set
 export const ANDROID_QUESTIONS = [
-					{
-						question: "What is Android?",
-						answer:
-							"Android is an open-source, Linux-Kernal based operating system, popular for Smartphones and Tablets.",
-					},
-					{
-						question: "What is the Android SDK?",
-						answer:
-							"Android Software Development Kit - a set of tools used for developing Android apps. " +
-							"Includes a GUI that emulates the Android environment - allowing developers to debug/test their code without having a physical android device.",
-					},
-					{
-						question:
-							"Name a few of the different versions of the Android OS that have been released",
-						answer:
-							"-Android 10: Q (API 29)" +
-							"-Android 9: Pie (API 28)" +
-							"-Android 8.0: Oreo (API 26)\n" +
-							"-Android 7.0: Nougat (API 24)\n" +
-							"-Android 6.0: Marshmallow (API 23)\n" +
-							"-Android 5.0 Lollipop (API 21)\n" +
-							"-Android 4.4 KitKat (API 19)" +
-							"-Android 4.1 Jelly Bean (API 16)",
-					},
-					{
-						question: "What is the difference between Mobile Application Testing and Mobile Testing?",
-						answer: "-Mobile application testing concerns the testing of a mobile application's functions and features\n" + 
-						"-Mobile testing concerns the testing of the actual mobile device, and that device's features/functionality",
-					},
-					{
-						question: "What are the most popular languages that can be used for Android App Development? ",
-						answer: "Java, Kotlin, C++, C#, JavaScript (React Native)",
-					},
-					{
-						question: "Give a basic description of each layer of the Android Architecture",
-						answer: "-Linux Kernal: The foundation of the Android architecture, placed at the bottom of the software stack. " + 
-						"The linux kernal provides Android with security features, power management, and the ability for device manufacturers to develop hardware drivers for a well-known kernal.\n" +
-						"-Hardware Abstraction Layer (HAL): Provides an interface between device drivers and the higher level Java API Framework. " + 
-						"Consists of library modules which implement the interfaces for specific types of hardware components, like the camera, bluetooth module, etc.\n" + 
-						"-Android Runtime (ART): Linux Kernal provides a multi-tasking execution environment so that multiple processes can execute. " + 
-						"Each process runs on its own instance of Android Runtime. " + 
-						"Also includes a set of core runtime libraries that provide most of the functionality of the Java programming language, which the Java API framework uses.\n" + 
-						"-Native C/C++ Libraries: Android platform provides Java framework APIs to expose the functionality of the native libraries written in C/C++ required by many of the core Android system components and services.\n" + 
-						"-Java API Framework: The Java APIs that provide availability to the entire feature-set of the Android OS. These Java APIs form the building blocks needed to create Android Apps\n" + 
-						"-System Apps: Android apps make up the top layer of the Android Architecture. These include built-in and third-party applications like SMS messaging, internet browsers, contacts, games, etc.",
-					},
-					{
-						question: "When a new Android project is created, what are the necessary components?",
-						answer: "-manifest: contains the appmanifest xml file\n" + 
-						"-build/: contains the build output\n" + 
-						"-src/: contains the source code and resource files\n" + 
-						"-res/: contains the bitmap images, UI strings, and XML layout files (all non-code resources)\n" + 
-						"-assets/: contains a file to  be compiled into an .apk file",
-					},
-					{
-						question: "List the important core components of Android",
-						answer: "Activity, Intents, Services, Content Provider, Fragment",
-					},
-					{
-						question: "What is an Activity in Android?",
-						answer: "Activites are the part of the mobile app which the user can see and interact with.\n" + 
-						"Activites keep track of:\n" + 
-						"-What a user is currently looking at\n" + 
-						"-Previously used processes, so the user can switch between them and the ongoing process\n" + 
-						"-The processes that need to be killed so a user can return to a previous state\n",
-					},
-					{
-						question: "What is a Service in Android?",
-						answer: "A serivice is an Android component that runs in the background and acts independently, without providing a user interface.",
-					},
-					{
-						question: "What are the seven different states of the Android Activity Lifecycle?",
-						answer: "1.onCreate()\n" + "2.onStart()\n" + "3.onRestart()\n" + "4.onResume()\n" + "5.onPause()\n" + "6.onStop()\n" + "onDestroy()\n",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-					{
-						question: "",
-						answer: "",
-					},
-				];				
+	{
+		question: "What is Android?",
+		answer:
+			"Android is an open-source, Linux-Kernal based operating system, popular for Smartphones and Tablets.",
+	},
+	{
+		question: "What is the Android SDK?",
+		answer:
+			"Android Software Development Kit - a set of tools used for developing Android apps. " +
+			"Includes a GUI that emulates the Android environment - allowing developers to debug/test their code without having a physical android device.",
+	},
+	{
+		question:
+			"Name a few of the different versions of the Android OS that have been released",
+		answer:
+			"-Android 10: Q (API 29)\n" +
+			"-Android 9: Pie (API 28)\n" +
+			"-Android 8.0: Oreo (API 26)\n" +
+			"-Android 7.0: Nougat (API 24)\n" +
+			"-Android 6.0: Marshmallow (API 23)\n" +
+			"-Android 5.0 Lollipop (API 21)\n" +
+			"-Android 4.4 KitKat (API 19)\n" +
+			"-Android 4.1 Jelly Bean (API 16)\n",
+	},
+	{
+		question:
+			"What is the difference between Mobile Application Testing and Mobile Testing?",
+		answer:
+			"-Mobile application testing concerns the testing of a mobile application's functions and features\n" +
+			"-Mobile testing concerns the testing of the actual mobile device, and that device's features/functionality",
+	},
+	{
+		question:
+			"What are the most popular languages that can be used for Android App Development? ",
+		answer: "Java, Kotlin, C++, C#, JavaScript (React Native)",
+	},
+	{
+		question:
+			"Give a basic description of each layer of the Android Architecture",
+		answer:
+			"-Linux Kernal: The foundation of the Android architecture, placed at the bottom of the software stack. " +
+			"The linux kernal provides Android with security features, power management, and the ability for device manufacturers to develop hardware drivers for a well-known kernal.\n" +
+			"-Hardware Abstraction Layer (HAL): Provides an interface between device drivers and the higher level Java API Framework. " +
+			"Consists of library modules which implement the interfaces for specific types of hardware components, like the camera, bluetooth module, etc.\n" +
+			"-Android Runtime (ART): Linux Kernal provides a multi-tasking execution environment so that multiple processes can execute. " +
+			"Each process runs on its own instance of Android Runtime. " +
+			"Also includes a set of core runtime libraries that provide most of the functionality of the Java programming language, which the Java API framework uses.\n" +
+			"-Native C/C++ Libraries: Android platform provides Java framework APIs to expose the functionality of the native libraries written in C/C++ required by many of the core Android system components and services.\n" +
+			"-Java API Framework: The Java APIs that provide availability to the entire feature-set of the Android OS. These Java APIs form the building blocks needed to create Android Apps\n" +
+			"-System Apps: Android apps make up the top layer of the Android Architecture. These include built-in and third-party applications like SMS messaging, internet browsers, contacts, games, etc.",
+	},
+	{
+		question:
+			"When a new Android project is created, what are the necessary components?",
+		answer:
+			"-manifest: contains the appmanifest xml file\n" +
+			"-build/: contains the build output\n" +
+			"-src/: contains the source code and resource files\n" +
+			"-res/: contains the bitmap images, UI strings, and XML layout files (all non-code resources)\n" +
+			"-assets/: contains a file to  be compiled into an .apk file",
+	},
+	{
+		question: "List the important core components of Android",
+		answer: "Activity, Intents, Services, Content Provider, Fragment",
+	},
+	{
+		question: "What is an Activity in Android?",
+		answer:
+			"Activites are the part of the mobile app which the user can see and interact with.\n" +
+			"Activites keep track of:\n" +
+			"-What a user is currently looking at\n" +
+			"-Previously used processes, so the user can switch between them and the ongoing process\n" +
+			"-The processes that need to be killed so a user can return to a previous state\n",
+	},
+	{
+		question: "What is a Service in Android?",
+		answer:
+			"A serivice is an Android component that runs in the background and acts independently, without providing a user interface.",
+	},
+	{
+		question:
+			"What are the seven different states of the Android Activity Lifecycle?",
+		answer:
+			"1.onCreate()\n" +
+			"2.onStart()\n" +
+			"3.onRestart()\n" +
+			"4.onResume()\n" +
+			"5.onPause()\n" +
+			"6.onStop()\n" +
+			"onDestroy()\n",
+	},
+	{
+		question: "What is an intent and what is their most significant use?",
+		answer:
+			"An intent is an abstract description of an operation to be performed. Its most significant use is in the launching of activities.",
+	},
+	{
+		question: "What is the difference between Implicit and Explicit intents?",
+		answer:
+			"An implicit intent calls system components, while an explicit intent invokes the activity class",
+	},
+	{
+		question: "Why is setting up permissions important in app development?",
+		answer:
+			"To restrict the code and data to authorized users only. If there is no restriction/it is accessible to anyone, code could be compromised and result in defect leakage.",
+	},
+	{
+		question: "What is the .apk file extension in Android?",
+		answer:
+			"Application Package Kit - used for the installation of mobile apps. Contains an app's code, resources, assets, certificates, and manifest file.",
+	},
+	{
+		question: "What is the primary database used for the Android platform?",
+		answer: "SQLite - open-source, serverless database",
+	},
+	{
+		question: "What is ANR in Android?",
+		answer: "Application not responding.",
+	},
+	{
+		question:
+			"What are the types of dialog boxes supported by the Android platform?",
+		answer:
+			"AlertDialog, TimePickerDialog, DatePickerDialog, and ProgressDialog (deprecated)",
+	},
+	{
+		question: "What is ADB?",
+		answer:
+			"Android Debug Bridge - a command line tool that performs shell commands. Used for direct communication between the emulator ports.",
+	},
+	{
+		question:
+			"What kind of information is included in the AndroidManifest.xml file?",
+		answer:
+			"The manifest includes application information like package name, permissions, activites, services, broadcast receivers, content providers, etc.",
+	},
+	{
+		question:
+			"What kind of scenarios can only be tested with a real Android device, instead of an emulator?",
+		answer:
+			"App interruption scenarios - when the app is interrupted by messages, phone calls, low battery, bluetooth issues, memory card mounting/unmounting, etc.",
+	},
+	{
+		question:
+			"How can you find memory leaks in an Android app you are developing?",
+		answer:
+			"Using the Android Profiler Memory Profiler tool to inspect the Java heap and memory allocations for your app",
+	},
+	{
+		question:
+			"What are some of the local data storage options on the Android platform?",
+		answer:
+			"-Shared Preferences: stores data in xml files. Simple way to store private data in key-value pairs\n" +
+			"-SQLite: stores structured data in a private SQLite database\n" +
+			"-Internal Storage: stores data in the device's file system, inacessible by other apps\n" +
+			"-External Storage: Also stores data in the device's file system, but it is accessible by other apps.",
+	},
+	{
+		question:
+			"Describe the three categories of sensors supported by the Android platform",
+		answer:
+			"1.Motion sensors: sensors for measuring acceleration forces and rotaional forces along three axes. Includes accelerometers, gravity sensors, gyroscopes, and rotational vector sensors.\n" +
+			"2.Environmental sensors: sensors for measuring environmental parameters like ambient air temperature, air pressure, illumination, and humidity. Includes barometers, photometers, and thermometers.\n" +
+			"3.Position sensors: sensors for measuring the physical position of a device. Includes orientation sensors and magnetometers.",
+	},
+	{
+		question: "Define the three key loops when monitoring an activity",
+		answer: "-Entire lifetime: an activity that happens between onCreate() and onDestroy()\n" + 
+		"-Visible lifetime: an activity that happens between onStart() and onStop()\n" + 
+		"-Foreground lifetime: an activity that happens between onResume() and onPause()\n",
+	},
+];
