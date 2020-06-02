@@ -9,48 +9,64 @@ class SelectQuestions extends Component{
     return (
 			<div className="flex justify-center mt7">
 				<div className="pa4">
-					<Button
-						variant="contained"
-						color="primary"
-						style={{ minWidth: "200px", minHeight: "200px", fontSize: "2rem" }}
-					>
-						<Link to="/javascript" className="white no-underline">
+					<Link to="/javascript" className="white no-underline">
+						<Button
+							variant="contained"
+							color="primary"
+							style={{
+								minWidth: "200px",
+								minHeight: "200px",
+								fontSize: "2rem",
+							}}
+						>
 							JavaScript
-						</Link>
-					</Button>
+						</Button>
+					</Link>
 				</div>
 				<div className="pa4">
-					<Button
-						variant="contained"
-						color="primary"
-						style={{ minWidth: "200px", minHeight: "200px", fontSize: "2rem" }}
-					>
-						<Link to="/react" className="white no-underline">
+					<Link to="/react" className="white no-underline">
+						<Button
+							variant="contained"
+							color="primary"
+							style={{
+								minWidth: "200px",
+								minHeight: "200px",
+								fontSize: "2rem",
+							}}
+						>
 							React/Redux
-						</Link>
-					</Button>
+						</Button>
+					</Link>
 				</div>
 				<div className="pa4">
-					<Button
-						variant="contained"
-						color="primary"
-						style={{ minWidth: "200px", minHeight: "200px", fontSize: "2rem" }}
-					>
-						<Link to="/data-structs" className="white no-underline">
+					<Link to="/data-structs" className="white no-underline">
+						<Button
+							variant="contained"
+							color="primary"
+							style={{
+								minWidth: "200px",
+								minHeight: "200px",
+								fontSize: "2rem",
+							}}
+						>
 							Data <br /> Structures
-						</Link>
-					</Button>
+						</Button>
+					</Link>
 				</div>
 				<div className="pa4">
-					<Button
-						variant="contained"
-						color="primary"
-						style={{ minWidth: "200px", minHeight: "200px", fontSize: "2rem" }}
-					>
-						<Link to="/android" className="white no-underline">
+					<Link to="/android" className="white no-underline">
+						<Button
+							variant="contained"
+							color="primary"
+							style={{
+								minWidth: "200px",
+								minHeight: "200px",
+								fontSize: "2rem",
+							}}
+						>
 							Android
-						</Link>
-					</Button>
+						</Button>
+					</Link>
 				</div>
 			</div>
 		);
