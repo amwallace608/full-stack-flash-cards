@@ -112,7 +112,10 @@ class ReactQuestions extends Component {
 			<div>
 				<div>
 					<Button variant="contained" color="primary">
-						<Link to="/home" className="white no-underline">
+						<Link
+							to="/full-stack-flash-cards/home"
+							className="white no-underline"
+						>
 							Home
 						</Link>
 					</Button>
