@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './Styles/index.css';
 import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <body style={{height: "100vh"}}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </body>,
-  document.getElementById('root')
+	<body style={{ height: "100vh" }}>
+		<HashRouter>
+			<App />
+		</HashRouter>
+	</body>,
+	document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

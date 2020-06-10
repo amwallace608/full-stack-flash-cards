@@ -3,6 +3,7 @@ import { Box } from '@material-ui/core'
 
 class QuestionCard extends Component{
   render(){
+		const { questionString } = this.props
     return (
 			//question card/container
 			<Box
@@ -11,7 +12,10 @@ class QuestionCard extends Component{
 				className="tc f4 white h-100 w-40 mr2 pa2"
 				style={{ minHeight: "150px" }}
 			>
-				<p className="v-mid">{this.props.questionString}</p>
+				{questionString.split("\n").map((i, key) => {
+					//replace newline symbols
+					return <div key={key}>{i}</div>;
+				})}
 			</Box>
 		);
   }

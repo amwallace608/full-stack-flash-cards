@@ -124,7 +124,7 @@ class AndroidQuestions extends Component {
 				<div>
 					<Button variant="contained" color="primary">
 						<Link
-							to="/full-stack-flash-cards/home"
+							to="/home"
 							className="white no-underline"
 						>
 							Home

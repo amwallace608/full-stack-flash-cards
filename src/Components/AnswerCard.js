@@ -4,7 +4,6 @@ import { Box } from "@material-ui/core";
 class AnswerCard extends Component {
 	render() {
     const { answerString } = this.props;
-    console.log(answerString)
     
 		return (
 			//question card/container

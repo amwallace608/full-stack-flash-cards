@@ -10,7 +10,7 @@ class SelectQuestions extends Component{
 			<div className="flex justify-center mt7">
 				<div className="pa4">
 					<Link
-						to="/full-stack-flash-cards/javascript"
+						to="/javascript"
 						className="white no-underline"
 					>
 						<Button
@@ -28,7 +28,7 @@ class SelectQuestions extends Component{
 				</div>
 				<div className="pa4">
 					<Link
-						to="/full-stack-flash-cards/react"
+						to="/react"
 						className="white no-underline"
 					>
 						<Button
@@ -46,7 +46,7 @@ class SelectQuestions extends Component{
 				</div>
 				<div className="pa4">
 					<Link
-						to="/full-stack-flash-cards/data-structs"
+						to="/data-structs"
 						className="white no-underline"
 					>
 						<Button
@@ -64,7 +64,7 @@ class SelectQuestions extends Component{
 				</div>
 				<div className="pa4">
 					<Link
-						to="/full-stack-flash-cards/android"
+						to="/android"
 						className="white no-underline"
 					>
 						<Button

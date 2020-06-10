@@ -64,7 +64,7 @@ export const JSQUESTIONS = [
 			"What is the arguments object in JS and how can you get the type of arguments passed to a function?",
 		answer:
 			"An array-like object accessible inside a function that contains the values of the arguments passed to it.\n" +
-			"Use the typof operator on the elements of the arguments array to get their type",
+			"Use the typeof operator on the elements of the arguments array to get their type",
 	},
 	{
 		question: "What are the scopes of a variable in JavaScript?",
@@ -120,14 +120,14 @@ export const JSQUESTIONS = [
 	{
 		question: "What is the difference between attributes and property?",
 		answer:
-			"-Attributes are defined by HTML, all the definitions inside an HTML tage are attributes, and attributes are always strings\n" +
+			"-Attributes are defined by HTML, all the definitions inside an HTML tag are attributes, and attributes are always strings\n" +
 			"-Properties belong to the DOM, which is of an object nature. You can get and set properties like a normal object, and they can be any type",
 	},
 	{
 		question:
 			"List out the different ways an HTML element can be accessed in JS code",
 		answer:
-			"getElementById(), getElementsByClass(), getElementsByTagName(), querySelector()",
+			"-getElementById()\n" + "-getElementsByClass()\n" + "-getElementsByTagName()\n" + "-querySelector()",
 	},
 	{
 		question: "What are the ways that JS can be integrated into an HTML file?",
@@ -150,7 +150,7 @@ export const JSQUESTIONS = [
 		question:
 			"What is the difference between Local Storage and Session Storage?",
 		answer:
-			"-Local: stored data will persist after the browser session ends, until it is manually cleared" +
+			"-Local: stored data will persist after the browser session ends, until it is manually cleared\n" +
 			"-Session: stored data will not persist after the browser session ends",
 	},
 	{
@@ -489,8 +489,8 @@ export const REACT_QUESTIONS = [
 		question: "Explain your understanding of 'refs' in React",
 		answer:
 			"Short hand for References. An attribute which helps to store a reference to a particular React element/component, " +
-			"which will be returned by the component's render configuration function." +
-			"Used to return references to an element/component returned by render()." +
+			"which will be returned by the component's render configuration function. " +
+			"Used to return references to an element/component returned by render(). " +
 			"Handy when DOM measurements are needed, or you need to add methods to the components",
 	},
 	{

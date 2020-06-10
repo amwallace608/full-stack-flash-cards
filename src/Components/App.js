@@ -12,39 +12,30 @@ class App extends Component{
     return (
 			<div className="background-grey">
 				<Switch>
-					<Route
-						exact
-						path="/"
-						render={() => <Redirect to="/full-stack-flash-cards/home" />}
-					/>
+					<Route exact path="/" render={() => <Redirect to="/home" />} />
 					<Route
 						exact
 						path="/full-stack-flash-cards"
-						render={() => <Redirect to="/full-stack-flash-cards/home" />}
+						render={() => <Redirect to="/home" />}
 					/>
 					<Route
-						exact
-						path="/full-stack-flash-cards/home"
+						path="/home"
 						component={SelectQuestions}
 					/>
 					<Route
-						exact
-						path="/full-stack-flash-cards/javascript"
+						path="/javascript"
 						component={JSQuestions}
 					/>
 					<Route
-						exact
-						path="/full-stack-flash-cards/react"
+						path="/react"
 						component={ReactQuestions}
 					/>
 					<Route
-						exact
-						path="/full-stack-flash-cards/data-structs"
+						path="/data-structs"
 						component={DataStructQuestions}
 					/>
 					<Route
-						exact
-						path="/full-stack-flash-cards/android"
+						path="/android"
 						component={AndroidQuestions}
 					/>
 				</Switch>
